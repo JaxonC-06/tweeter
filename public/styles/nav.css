@@ -18,8 +18,13 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .bold {
   font-weight: 600;
+}
+
+.fa-angles-down {
+  color: tomato;
 }
