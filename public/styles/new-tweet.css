@@ -4,6 +4,7 @@
 }
 
 textarea {
+  width: 100%;
   border: none;
   outline: none;
   background-color: inherit;
@@ -25,6 +26,7 @@ button {
   display: flex;
   font-family: "Bungee", sans-serif;
   background-color: #4056A1;
+  color: #FFF;
   outline: none;
   border: none;
   box-shadow: 0 6px #999;

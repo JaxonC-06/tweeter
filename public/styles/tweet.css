@@ -1,0 +1,55 @@
+/* CSS for existing tweets in the database*/
+article.tweet {
+  border: solid;
+  padding: 0 1em;
+  margin: 1em 0;
+}
+
+article.tweet:hover {
+  box-shadow: 10px 5px 5px rgb(175, 172, 172);
+}
+
+/* Tweet header CSS */
+article.tweet header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+}
+
+article.tweet header div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fa-user-check {
+  font-size: 130%;
+}
+
+.user-handle {
+  font-weight: 600;
+  color: rgb(124, 119, 119);
+}
+
+/* Tweet footer CSS */
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid;
+  padding: 0;
+  font-size: smaller;
+}
+
+article.tweet footer div {
+  display: flex;
+  gap: 10px;
+  color: #4056A1;
+}
+
+/* Button animations for footer */
+.tweet-reactions:hover {
+  color: tomato;
+  font-size: larger;
+}

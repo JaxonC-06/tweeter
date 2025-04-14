@@ -27,6 +27,9 @@
     <!-- New Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!-- Existing Tweets CSS -->
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -58,6 +61,8 @@
     </header>
 
     <main class="container">
+
+      <!-- New Tweet Form -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/api/tweets">
@@ -69,6 +74,29 @@
           </div>
         </form>
       </section>
+
+      <!-- Existing Tweets -->
+      <section>
+        <article class="tweet">
+          <header>
+            <div>
+              <i class="fa-solid fa-user-check"></i>
+              <p>Newton</p>
+            </div>
+            <p class="user-handle">@SirIsaac</p>
+          </header>
+          <p>If I have seen further it is by standing on the shoulders of giants</p>
+          <footer>
+            <p>10 days ago</p>
+            <div>
+              <i class="fa-solid fa-flag tweet-reactions"></i>
+              <i class="fa-solid fa-retweet tweet-reactions"></i>
+              <i class="fa-solid fa-heart tweet-reactions"></i>
+            </div>
+          </footer>
+        </article>
+      </section>
+
     </main>
   </body>
 </html>
