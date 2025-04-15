@@ -15,7 +15,7 @@ $(document).ready(function() {
       <article class="tweet">
         <header>
           <div>
-            <i class="fa-solid fa-user-check"></i>
+            <img src=${tweet.user.avatars}>
             <p>${tweet.user.name}</p>
           </div>
           <h4 class="user-handle">${tweet.user.handle}</h4>
