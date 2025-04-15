@@ -39,9 +39,9 @@ $(document).ready(function() {
   const renderTweets = function(tweetArray) {
     for (const tweet of tweetArray) {
       const $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     }
-  }
+  };
 
   // Hard-coded initial-tweets data
   const tweetsData = [
@@ -67,7 +67,7 @@ $(document).ready(function() {
       },
       "created_at": 1461113959088
     }
-  ]
+  ];
 
   renderTweets(tweetsData);
 });
