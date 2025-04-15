@@ -24,12 +24,12 @@ article.tweet header div {
 }
 
 .fa-user-check {
-  font-size: 130%;
+  font-size: 1.3em;
 }
 
 .user-handle {
-  font-weight: 600;
-  color: rgb(124, 119, 119);
+  margin: 0;
+  color: rgb(145, 138, 138);
 }
 
 /* Tweet footer CSS */
