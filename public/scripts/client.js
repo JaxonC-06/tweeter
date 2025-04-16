@@ -46,12 +46,7 @@ $(document).ready(function() {
 
   // Form submission w/ jQuery
   $('form').on('submit', function(event) {
-    const tweetLength = $('textarea').val().length;
-    if (tweetLength === 0) {
-      alert("Your tweet is empty!");
-    } else if (tweetLength > 140) {
-      alert("Your tweet exceeds the maximum character size!");
-    } else {
+    if (isTweetValid()) {
       $.ajax({
         url: "/api/tweets",
         method: "POST",
@@ -81,3 +76,14 @@ $(document).ready(function() {
 
   loadTweets();
 });
+
+const isTweetValid = function() {
+  const tweetLength = $('textarea').val().trim().length;
+    if (tweetLength === 0) {
+      alert("Your tweet is empty!");
+    } else if (tweetLength > 140) {
+      alert("Your tweet exceeds the maximum character size!");
+    } else {
+      return true;
+    }
+}
