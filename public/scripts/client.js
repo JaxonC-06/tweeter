@@ -52,8 +52,8 @@ $(document).ready(function() {
         method: "POST",
         data: $(this).serialize(),
         success: (response) => {
-          const newTweetElement = createTweetElement(response);
-          $('#tweets-container').prepend(newTweetElement);
+          $('#tweets-container').empty();
+          loadTweets();
         }
       });
     }
