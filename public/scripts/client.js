@@ -70,4 +70,18 @@ $(document).ready(function() {
   ];
 
   renderTweets(tweetsData);
+
+  // Form submission w/ jQuery
+  $('form').on('submit', function(event) {
+    $.ajax({
+      url: "/api/tweets",
+      method: "POST",
+      data: $(this).serialize(),
+      success: (response) => {
+        console.log(response);
+      }
+    });
+
+    event.preventDefault();
+  });
 });
