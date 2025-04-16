@@ -51,8 +51,12 @@ $(document).ready(function() {
       method: "POST",
       data: $(this).serialize(),
       success: (response) => {
-        console.log(response);
+        const newTweetElement = createTweetElement(response);
+        $('#tweets-container').prepend(newTweetElement);
       }
+    })
+    .fail(() => {
+      alert("There was an error posting your tweet!");
     });
 
     event.preventDefault();
@@ -65,6 +69,9 @@ $(document).ready(function() {
       success: (data) => {
         renderTweets(data);
       }
+    })
+    .fail(() => {
+      alert("There was an error loading the requested page");
     });
   };
 
