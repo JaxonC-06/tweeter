@@ -9,7 +9,6 @@ textarea {
   outline: none;
   background-color: inherit;
   height: 35px;
-  max-height: 200px;
   resize: none;
   overflow: scroll;
 }
@@ -19,12 +18,12 @@ textarea {
   justify-content: space-between;
   border-top: solid;
   padding: 1em 0;
+  font-family: "Bungee", sans-serif;
 }
 
 /* Button animations, hover and pressed effect*/
 button {
   display: flex;
-  font-family: "Bungee", sans-serif;
   background-color: #4056A1;
   color: #FFF;
   outline: none;
@@ -44,4 +43,26 @@ button:active {
 
 .negative {
   color: red;
+}
+
+.error-message {
+  display: flex;
+  justify-content: center;
+  color: red;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  margin: 0 auto;
+  transform-origin: bottom;
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(); }
+  30%  { transform: translateY(-30px); }
+  50%  { transform: translateY(0); }
+  100% { transform: translateY(0); }
 }

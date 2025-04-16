@@ -81,10 +81,18 @@ $(document).ready(function() {
 const isTweetValid = function() {
   const tweetLength = $('textarea').val().trim().length;
     if (tweetLength === 0) {
-      alert("Your tweet is empty!");
+      $('.error-message').empty();
+      let $error = (`
+        <p class="error-message bounce">Your tweet is empty!</p>
+      `);
+      $('.new-tweet').prepend($error);
       return false;
     } else if (tweetLength > 140) {
-      alert("Your tweet exceeds the maximum character size!");
+      $('.error-message').empty();
+      let $error = (`
+        <p class="error-message bounce">Your tweet exceeds the maximum tweet size!</p>
+      `);
+      $('.new-tweet').prepend($error);
       return false;
     } else {
       return true;
