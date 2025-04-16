@@ -12,6 +12,7 @@ $(document).ready(function() {
  */
   const createTweetElement = function(tweet) {
     const tweetDate = timeago.format(tweet.created_at);
+    const tweetFromUser = tweet.content.text;
     const $tweet = $(`
       <article class="tweet">
         <header>
@@ -21,7 +22,7 @@ $(document).ready(function() {
           </div>
           <h4 class="user-handle">${tweet.user.handle}</h4>
         </header>
-        <p>${tweet.content.text}</p>
+        <p>${escapeText(tweetFromUser)}</p>
         <footer>
           <p>${tweetDate}</p>
           <div>
@@ -88,4 +89,10 @@ const isTweetValid = function() {
     } else {
       return true;
     }
-}
+};
+
+const escapeText = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
