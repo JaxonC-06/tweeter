@@ -80,11 +80,13 @@ $(document).ready(function() {
 
 const isTweetValid = function() {
   const tweetLength = $('textarea').val().trim().length;
+  
     if (tweetLength === 0) {
       $('.error-message').empty();
       let $error = (`
         <p class="error-message bounce">Your tweet is empty!</p>
       `);
+      $('.error-message').slideDown();
       $('.new-tweet').prepend($error);
       return false;
     } else if (tweetLength > 140) {
@@ -95,6 +97,7 @@ const isTweetValid = function() {
       $('.new-tweet').prepend($error);
       return false;
     } else {
+      $('.error-message').slideUp();
       return true;
     }
 };
