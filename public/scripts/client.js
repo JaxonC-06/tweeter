@@ -81,8 +81,10 @@ const isTweetValid = function() {
   const tweetLength = $('textarea').val().trim().length;
     if (tweetLength === 0) {
       alert("Your tweet is empty!");
+      return false;
     } else if (tweetLength > 140) {
       alert("Your tweet exceeds the maximum character size!");
+      return false;
     } else {
       return true;
     }
