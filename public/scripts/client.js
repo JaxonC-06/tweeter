@@ -46,18 +46,22 @@ $(document).ready(function() {
 
   // Form submission w/ jQuery
   $('form').on('submit', function(event) {
-    $.ajax({
-      url: "/api/tweets",
-      method: "POST",
-      data: $(this).serialize(),
-      success: (response) => {
-        const newTweetElement = createTweetElement(response);
-        $('#tweets-container').prepend(newTweetElement);
-      }
-    })
-    .fail(() => {
-      alert("There was an error posting your tweet!");
-    });
+    const tweetLength = $('textarea').val().length;
+    if (tweetLength === 0) {
+      alert("Your tweet is empty!");
+    } else if (tweetLength > 140) {
+      alert("Your tweet exceeds the maximum character size!");
+    } else {
+      $.ajax({
+        url: "/api/tweets",
+        method: "POST",
+        data: $(this).serialize(),
+        success: (response) => {
+          const newTweetElement = createTweetElement(response);
+          $('#tweets-container').prepend(newTweetElement);
+        }
+      });
+    }
 
     event.preventDefault();
   });
