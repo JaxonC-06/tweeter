@@ -1,5 +1,5 @@
 .new-tweet {
-  display: flex;
+  display: none;
   flex-flow: column wrap;
 }
 
@@ -10,7 +10,7 @@ textarea {
   background-color: inherit;
   height: 35px;
   resize: none;
-  overflow: scroll;
+  overflow-y: hidden;
 }
 
 .submission {

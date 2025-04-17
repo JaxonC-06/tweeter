@@ -45,6 +45,18 @@ $(document).ready(function() {
     }
   };
 
+  // Slide #new-tweet down when the button is clicked
+  $('.fa-angles-down').on('click', function() {
+    $('.new-tweet').slideToggle('slow');
+    $(this).toggleClass('end-animation')
+  });
+
+  // Automatically grow the textarea when a user needs multiple lines
+  $('#tweet-text').on('input', function() {
+    this.style.height = '35px';
+    this.style.height = (this.scrollHeight) + 'px';
+  });
+
   // Form submission w/ jQuery
   $('form').on('submit', function(event) {
     if (isTweetValid()) {
