@@ -29,6 +29,7 @@ nav {
 
 .fa-angles-down {
   color: tomato;
+  cursor: pointer;
   transition: all 0.3s ease;
   animation: pulse 1.5s infinite;
 }
