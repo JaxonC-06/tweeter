@@ -22,7 +22,7 @@ textarea {
 }
 
 /* Button animations, hover and pressed effect*/
-button {
+.submission button {
   display: flex;
   background-color: #4056A1;
   color: #FFF;
@@ -32,11 +32,11 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.submission button:hover {
   background-color: #1a42c7;
 }
 
-button:active {
+.submission button:active {
   background-color: #1a42c7;
   box-shadow: 0 3px #666;
   transform: translateY(2px);
