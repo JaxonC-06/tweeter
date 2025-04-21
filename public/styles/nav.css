@@ -49,3 +49,22 @@ nav {
   animation-duration: 1.5s;
   animation-timing-function: ease-out;
 }
+
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  border-radius: 50%;
+  font-size: 150%;
+  padding: 25px;
+  background-color: tomato;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+#back-to-top:hover {
+  background-color: rgb(255, 38, 0);
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}

@@ -74,6 +74,20 @@ $(document).ready(function() {
     event.preventDefault();
   });
 
+  // Display the back-to-top button if the user has scrolled down
+  $(document).on('scroll', function() {
+    if ($(document).scrollTop() > 0) {
+      $('#back-to-top').show('slow');
+    } else {
+      $('#back-to-top').hide('slow');
+    }
+  });
+
+  // Scroll to top if the user clicks back-to-top button
+  $('#back-to-top').on('click', function() {
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
+  });
+
   // Fetching tweets w/ AJAX
   const loadTweets = function() {
     $.ajax({
