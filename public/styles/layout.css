@@ -16,21 +16,47 @@ html {
 
 body {
   color: #545149;
-  background-color: #ffb236;
+  background-color: #FFF;
   font-size: 24px;
   font-family: "Source Sans 3", sans-serif;
   padding-top: 120px;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
-*/
-
 main {
   display: flex;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  background-color: inherit;
+  padding: 1.5em;
+  background-color: #FFF;
   flex-direction: column;
+}
+
+/* Tablet Formatting */
+@media only screen and (max-width: 1024px) {
+  nav {
+    background-color: #ffb236;
+    background-image: url("/images/asfalt-light.png");
+  }
+}
+
+/* Desktop Formatting */
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+  }
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+  .container {
+    padding: 1.5em;
+  }
+  .main-app-header {
+    width: 50%;
+    margin: 2em;
+  }
+  .tweets-container {
+    width: 50%;
+  }
 }

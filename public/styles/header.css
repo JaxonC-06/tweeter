@@ -1,6 +1,5 @@
 /* Header stylesheet */
-header {
-  width: 100%;
+.main-app-header {
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -8,5 +7,6 @@ header {
   justify-content: center;
   background-color: #ffb236;
   background-image: url("/images/asfalt-light.png");
+  height: fit-content;
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
