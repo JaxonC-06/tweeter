@@ -3,6 +3,10 @@
   flex-flow: column wrap;
 }
 
+form {
+  padding: 1.5em 0;
+}
+
 textarea {
   width: 100%;
   border: none;
@@ -63,7 +67,7 @@ textarea {
 
 @keyframes bounce {
   0%   { transform: translateY(); }
-  30%  { transform: translateY(-30px); }
+  30%  { transform: translateY(30px); }
   50%  { transform: translateY(0); }
   100% { transform: translateY(0); }
 }

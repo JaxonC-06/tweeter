@@ -48,7 +48,8 @@ $(document).ready(function() {
   // Slide #new-tweet down when the button is clicked
   $('.fa-angles-down').on('click', function() {
     $('.new-tweet').slideToggle('slow');
-    $(this).toggleClass('end-animation')
+    $('#tweet-text').focus();
+    $(this).toggleClass('end-animation');
   });
 
   // Automatically grow the textarea when a user needs multiple lines
