@@ -65,7 +65,7 @@ $(document).ready(function() {
         url: "/api/tweets",
         method: "POST",
         data: $(this).serialize(),
-        success: (response) => {
+        success: () => {
           $('#tweets-container').empty();
           this.reset();
           loadTweets();
@@ -109,25 +109,25 @@ $(document).ready(function() {
 const isTweetValid = function() {
   const tweetLength = $('textarea').val().trim().length;
   
-    if (tweetLength === 0) {
-      $('.error-message').empty();
-      let $error = (`
-        <p class="error-message bounce">Your tweet is empty!</p>
-      `);
-      $('.error-message').slideDown();
-      $('.new-tweet').prepend($error);
-      return false;
-    } else if (tweetLength > 140) {
-      $('.error-message').empty();
-      let $error = (`
-        <p class="error-message bounce">Your tweet exceeds the maximum tweet size!</p>
-      `);
-      $('.new-tweet').prepend($error);
-      return false;
-    } else {
-      $('.error-message').slideUp();
-      return true;
-    }
+  if (tweetLength === 0) {
+    $('.error-message').empty();
+    let $error = (`
+      <p class="error-message bounce">Your tweet is empty!</p>
+    `);
+    $('.error-message').slideDown();
+    $('.new-tweet').prepend($error);
+    return false;
+  } else if (tweetLength > 140) {
+    $('.error-message').empty();
+    let $error = (`
+      <p class="error-message bounce">Your tweet exceeds the maximum tweet size!</p>
+    `);
+    $('.new-tweet').prepend($error);
+    return false;
+  } else {
+    $('.error-message').slideUp();
+    return true;
+  }
 };
 
 const escapeText = function(str) {
