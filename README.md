@@ -4,8 +4,9 @@ Tweeter is a simple, single-page X(formerly Twitter) clone designed to showcase 
 
 ## Project Images
 
-!["Main app view on Mobile"](https://github.com/JaxonC-06/tweeter/blob/master/docs/Tweeter%20Desktop.mp4)
-!["Main app view on Desktop"](https://github.com/JaxonC-06/tweeter/blob/master/docs/Tweeter%20Desktop.mp4)
+!["Main app view on Mobile"](https://github.com/JaxonC-06/tweeter/blob/master/docs/tweeter-mobile.png)
+!["Main app view on Desktop"](https://github.com/JaxonC-06/tweeter/blob/master/docs/tweeter-desktop.png)
+!["Tweet section view"](https://github.com/JaxonC-06/tweeter/blob/master/docs/tweet-section.png)
 
 ## Getting Started
 
