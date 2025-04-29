@@ -39,6 +39,7 @@ $(document).ready(function() {
 
   // Append each tweet to the existing html
   const renderTweets = function(tweetArray) {
+    $('#tweets-container').empty();
     for (const tweet of tweetArray) {
       const $tweet = createTweetElement(tweet);
       $('#tweets-container').prepend($tweet);
